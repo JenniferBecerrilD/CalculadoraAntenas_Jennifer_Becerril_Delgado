@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+  <html>
+    <head>
+      <meta charset="UTF-8">
+    </head>
+
+    <div id="inicio"></div>
+
+    <header class="masthead">
+
+      <title>Cable coaxial</title>
+
+      <link rel="stylesheet" href="css/calculadora.css">
+      <link href="css/styles2.css" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+
+      
+      <div class="container">
+        <div class="masthead-subheading2 text-uppercase">CABLE COAXIAL</div>
+        <div class="masthead-subheading"></div>
+        <div class="masthead-subheading"></div>
+    </div>
+    </header>
+
+
+
+    <body>
+
+     
+
+
+
+      <span class="fa-stack fa-4x">
+        <img class="circular--square3" src="img/lineacoaxial.JPG" />
+    </span>
+
+
+
+
+
+
+      <div id="Cable_Coaxial"></div>
+
+
+      <div class="Formulario">
+
+        <!--Linea coaxial-->
+
+
+
+
+        <div class="rightAling" style='text-align:right'>
+
+
+        </div>
+
+        <div class="Seleccion_lineas">
+
+          <div>
+
+            <label class="formulario_label" for="dielectrico2" >Selecciona el material del dieléctrico</label>
+
+            <select class="formulario_dielectricos" id="dielectrico2" name="Linea" onchange="quitar_input()">
+
+              <optgroup id="dielectric_opt2">
+
+                <option disabled selected value="0">Elige una opción</option>
+
+                <option  value="1">Baquelita</option>
+
+                <option  value="2">Duroid</option>
+
+                <option  value="3">Fibra de Vidrio (D Glass) </option>
+
+                <option  value="4">Fibra de Vidrio (E glass)</option>
+
+                <option  value="5">FR4</option>
+
+                <option  value="6">Hule</option>
+
+                <option  value="7">Mica</option>
+
+                <option  value="8">Mylar</option>
+
+                <option  value="9">Nylon</option>
+
+                <option  value="10">Plexiglass</option>
+
+                <option  value="11">Poliestireno</option>
+
+                <option  value="12">Polietileno</option>
+
+                <option  value="13">Polipropileno</option>
+
+                <option  value="14">Porcelana</option>
+
+                <option  value="15">PVC</option>
+
+                <option  value="16">Teflon</option>
+
+              </optgroup>
+
+            </select>
+
+          </div>
+
+          <div>
+
+            <label class="formulario_label_dielectrico" for="dielectrico_in2">O ingresa la permitividad relativa </label>
+
+            <input class="formulario_dielectricos_in" type="text"  id="dielectrico_in2"  >
+
+          </div>
+
+        </div>
+
+
+
+
+
+        <div class="coaxial" id="coaxial">
+
+
+        </div>
+
+
+
+        <!--Impedancia-->
+
+          <h3 class="titulos2">Impedancia</h3>
+
+          <div>
+
+            <div>
+
+              <label class="formulario_label" for="Impedancia_caracteristica_coaxial">Impedancia característica en Ohms</label>
+
+              <input class="formulario_input" type="text" placeholder="" id="Impedancia_caracteristica_coaxial" >
+
+            </div>
+
+            <div>
+
+              <label class="formulario_label" for="Frecuencia_corte_coaxial">Frecuencia de corte en GHz</label>
+
+              <input class="formulario_input" type="text" placeholder="" id="Frecuencia_corte_coaxial" >
+
+            </div>
+
+          </div>
+
+          <div class="enviar_info" style="text-align: right">
+
+            <Button id="btn_dimensiones_coaxial" >Calcular dimensiones del cable coaxial </Button>
+
+          </div>
+
+
+
+          <!--Dimesiones de la linea-->
+
+          <h3 class="titulos2">Dimensiones de la línea</h3>
+
+          <div class="Seleccion_lineas">
+
+            <div >
+
+              <div>
+
+                <label class="formulario_label" for="Diametro_interior">Diámetro interior(Di)</label>
+
+                <input class="formulario_medidas" type="text" id="Diametro_interior" >
+
+              </div>
+
+              <div>
+
+                <label class="formulario_label" for="Diametro_exterior">Diámetro exterior(Do)</label>
+
+                <input class="formulario_medidas" type="text" id="Diametro_exterior">
+
+              </div>
+
+
+
+            </div>
+
+            <div>
+
+              <label class="formulario_label_medidas" for="medida_diametro">Indica tamaño</label>
+
+              <select class="formulario_select_medidas" id="medida_diametro">
+
+                <optgroup>
+
+                  <option  value="1">cm</option>
+
+                  <option  value="2">mm</option>
+
+                </optgroup>
+
+              </select>
+
+            </div>
+
+          </div>
+
+          <div class="enviar_info" style="text-align: right">
+
+            <Button id="btn_impedancia_coaxial" >Calcular impedancia característica del cable coaxial</Button>
+
+          </div>
+
+        <div class="CenterAling"  style="text-align: center">
+
+          <div class="enviar_info">
+
+            <br><a href="portada.html" class="enviar_info3"><Button>Volver al inicio</Button></a></br>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+    
+
+
+
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/Permitividad.js"></script>
+    <script src="js/Validar.js"></script>
+    <script src="js/Cambio_Login.js"></script>
+    <script src="js/Microcinta.js"></script>
+    <script src="js/Coaxial.js"></script>
+    <script src="js/Bifilar.js"></script>
+
+    
+
+    
+
+  </body>
+
+
+
+</html>

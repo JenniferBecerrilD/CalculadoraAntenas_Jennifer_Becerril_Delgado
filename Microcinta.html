@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+  <html>
+    <head>
+      <meta charset="UTF-8">
+    </head>
+
+    <div id="inicio"></div>
+
+    <header class="masthead">
+
+      <title>Microcinta</title>
+
+      <link rel="stylesheet" href="css/calculadora.css">
+      <link href="css/styles2.css" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+
+      <div class="container">
+        <div class="masthead-subheading2 text-uppercase">MICROCINTA</div>
+        <div class="masthead-subheading"></div>
+        <div class="masthead-subheading"></div>
+    </div>
+
+    </header>
+
+
+
+    <body>
+
+  
+
+
+
+      <span class="fa-stack fa-4x">
+        <img class="circular--square3" src="img/lineamicrocinta.png" />
+    </span>
+
+
+      <div id="macrocinta"></div>
+
+      
+
+
+
+      <div class="Formulario">
+
+        <!--Macrocinta-->
+
+        <!--Datos necesarios para la linea de transmisión-->
+
+                <div class="rightAling" style='text-align:right'>
+
+                 
+
+                </div>
+
+                <div class="Seleccion_lineas" >
+
+                  <div>
+
+                    <label class="formulario_label" for="dielectrico1" >Seleccione material del dieléctrico</label>
+
+                    <select class="formulario_dielectricos" id="dielectrico1" name="Linea" onchange="quitar_input()">
+
+                      <optgroup id="dielectric_opt1">
+
+                        <option disabled selected value="0">Elige una opción</option>
+
+                        <option  value="1">Baquelita</option>
+
+                        <option  value="2">Duroid</option>
+
+                        <option  value="3">Fibra de Vidrio (D Glass) </option>
+
+                        <option  value="4">Fibra de Vidrio (E glass)</option>
+
+                        <option  value="5">FR4</option>
+
+                        <option  value="6">Hule</option>
+
+                        <option  value="7">Mica</option>
+
+                        <option  value="8">Mylar</option>
+
+                        <option  value="9">Nylon</option>
+
+                        <option  value="10">Plexiglass</option>
+
+                        <option  value="11">Poliestireno</option>
+
+                        <option  value="12">Polietileno</option>
+
+                        <option  value="13">Polipropileno</option>
+
+                        <option  value="14">Porcelana</option>
+
+                        <option  value="15">PVC</option>
+
+                        <option  value="16">Teflon</option>
+
+                      </optgroup>
+
+                    </select>
+
+                  </div>
+
+  
+
+                  <div>
+
+                    <label class="formulario_label_dielectrico" for="dielectrico_in1">O ingresa permitividad relativa </label>
+
+                    <input class="formulario_dielectricos_in" type="text"  id="dielectrico_in1"  >
+
+                  </div>
+
+                </div>
+
+
+
+
+
+
+
+                  <div class="Seleccion_lineas">
+
+                    <div>
+
+                      <div>
+
+                        <label class="formulario_label" for="Espesor_dielectrico">Espesor/alto del dielectrico(h)</label>
+
+                        <input class="formulario_medidas" type="text" placeholder="" id="Espesor_dielectrico" >
+
+                      </div>
+
+                     
+
+                    </div>
+
+                    <div>
+
+                      <label class="formulario_label_medidas" for="medida_espesor_dielectrico">Indica tamaño</label>
+
+                      <select class="formulario_select_medidas" id="medida_espesor_dielectrico_y_linea" name="medida_espesor_dielectrico">
+
+                        <optgroup>
+
+                          <option  value="1">cm</option>
+
+                          <option  value="2">mm</option>
+
+                        </optgroup>
+
+                      </select>
+
+                    </div>
+
+                  </div>
+
+
+
+                  <div class="Seleccion_lineas">
+
+                    <div>
+
+                      <label class="formulario_label" for="frecuencia_linea">Frecuencia de la linea</label>
+
+                      <input class="formulario_medidas" type="text" id="frecuencia_linea" >
+
+                    </div>
+
+                    <div>
+
+                      <label class="formulario_label_medidas" for="Hertz">Indica medida</label>
+
+                      <select class="formulario_select_medidas_frecuencia" id="Hertz" name="Hertz_medida">
+
+                        <optgroup>
+
+                          <option  value="1">mHz</option>
+
+                          <option  value="2" selected >Hz</option>
+
+                          <option  value="3">kHz</option>
+
+                          <option  value="4">MHz</option>
+
+                          <option  value="5">GHz</option>
+
+                        </optgroup>
+
+                      </select>
+
+                    </div>
+
+                  </div>
+
+
+
+
+
+                  <!--Impedancia-->
+
+
+
+                  <h3 class="titulos2">Impedancia</h3>
+
+                  <div>
+
+                    <div>
+
+                      <label class="formulario_label" for="Impedancia_caracteristica_microcinta">Impedancia característica en Ohms</label>
+
+                      <input class="formulario_input" type="text" placeholder="" id="Impedancia_caracteristica_microcinta" >
+
+                    </div>
+
+                    <div>
+
+                      <label class="formulario_label" for="Longitud_electrica">Longitud electrica en grados</label>
+
+                      <input class="formulario_input" type="text" placeholder="" id="Longitud_electrica" >
+
+                    </div>
+
+                  </div>
+
+                  <div class="enviar_info" style="text-align: right">
+
+                    <Button id="btn_dimensiones_microcinta" >Calcular dimensiones de la linea </Button>
+
+                  </div>
+
+
+
+      
+
+
+
+                <!--Dimesiones de la linea-->
+
+                  <h3 class="titulos2">Dimensiones de la linea</h3>
+
+                  <div class="Seleccion_lineas">
+
+                    <div>
+
+                      <div>
+
+                        <label class="formulario_label" for="ancho_linea_microcinta">Ancho de la linea(W)</label>
+
+                        <input class="formulario_medidas" type="text" id="ancho_linea_microcinta" >
+
+                      </div>
+
+                      <div>
+
+                        <label class="formulario_label" for="Largo_linea_microcinta">Largo de la linea(L)</label>
+
+                        <input class="formulario_medidas" type="text" id="Largo_linea_microcinta">
+
+                      </div>
+
+
+
+                    </div>
+
+                    <div>
+
+                      <label class="formulario_label_medidas" for="medida_ancho_largo_linea">Indica tamano</label>
+
+                      <select class="formulario_select_medidas" id="medida_ancho_largo_linea" name="medida_ancho_linea">
+
+                        <optgroup>
+
+                          <option  value="1">cm</option>
+
+                          <option  value="2">mm</option>
+
+                        </optgroup>
+
+                      </select>
+
+                    </div>
+
+                  </div>
+
+
+
+                <div class="enviar_info" style="text-align: right">
+
+                  <Button id="btn_impedancia_microcinta" >Calcular impedancia característica de la linea</Button>
+
+                </div>
+
+
+
+        <div class="CenterAling"  style="text-align: center">
+
+          <div class="enviar_info">
+
+            <br><a href="portada.html" class="enviar_info3"><Button>Volver al inicio</Button></a></br>
+
+          </div>
+
+        </div>
+
+      </div>
+
+  
+
+
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/Permitividad.js"></script>
+    <script src="js/Validar.js"></script>
+    <script src="js/Cambio_Login.js"></script>
+    <script src="js/Microcinta.js"></script>
+    <script src="js/Coaxial.js"></script>
+    <script src="js/Bifilar.js"></script>
+
+    
+
+    
+
+  </body>
+
+
+
+</html>
